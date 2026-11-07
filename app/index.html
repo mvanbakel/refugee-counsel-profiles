@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refugee Counsel Profiles</title>
+  <meta name="description" content="Track records of counsel before Canada's Refugee Protection Division, built from published decisions.">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">RC</span><span>Refugee Counsel<span class="brand-long"> Profiles</span></span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="#/" data-nav="home">Find counsel</a>
+        <a href="#/about" data-nav="about">How it works</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="view" class="wrap" tabindex="-1">
+    <p class="loading">Loading profiles…</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      Data: published Refugee Protection Division decisions, 2002–2020, from the
+      <a href="https://a2aj.ca/" rel="noopener">Access to Algorithmic Justice (A2AJ)</a> project, an
+      unofficial reproduction of Immigration and Refugee Board decisions. Not legal advice and not an
+      endorsement of any representative. A legal engineering class project.
+    </div>
+  </footer>
+
+  <dialog id="reader" aria-labelledby="reader-title">
+    <div class="dlg-head">
+      <h2 id="reader-title" style="margin:0">Decision</h2>
+      <button type="button" id="reader-close">Close</button>
+    </div>
+    <div class="dlg-body" id="reader-body"></div>
+    <div class="dlg-foot">Unofficial reproduction from A2AJ, obtained from the Immigration and Refugee Board.
+      Claimants' names are removed (XXXX). For the official copy, contact the IRB.</div>
+  </dialog>
+
+  <div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+  <script src="app.js?v=3"></script>
+</body>
+</html>

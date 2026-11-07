@@ -41,6 +41,24 @@ A legal engineering class project. It builds profiles of counsel who appear befo
 6. **Specialization:** countries, claim types and issues handled
 7. **Joined and family claims handled**
 
+## The app
+
+A static website in `app/`: search counsel, filter by the claimant's country, and open a profile showing experience, countries, board members, decisions per year, results compared with similar cases, "no credible basis" findings, and every decision. The **Read** button loads a decision's full text live from the A2AJ API, one request per click.
+
+```bash
+.venv/bin/python src/profiles.py                      # rebuild app/data/profiles.json
+python3 -m http.server 8765 --directory app           # then open http://localhost:8765
+```
+
+It needs no build step, so any static host (e.g. GitHub Pages) can serve the `app/` folder as is.
+
+### How profiles are built (`src/profiles.py`)
+
+- **Names:** text in parentheses and titles (Me, Mr., Barrister and Solicitor) are removed. Entries naming two counsel are split, and both are credited. Spellings are merged by last name plus a similar first name (Shelley/Shelly). An initial joins a full name only when exactly one fits. 1,408 raw names become 1,098 profiles.
+- **Countries:** about 260 spellings are reduced to one name per country ("People's Republic of China" → China).
+- **Expected outcome:** for each claim, the chance of acceptance and of a "no credible basis" finding is estimated from *other* claims sharing its country, board member, 3-year period and whether the Minister intervened. Each group's rate is pulled toward the overall rate, and the groups are combined on the log-odds scale. A counsel's observed total is compared with the sum of their expected values, using a 95% Poisson range. A verdict appears only when at least 2 acceptances are expected *and* the whole range is above or below 1×.
+- **Design choice:** verdicts appear only on the profile, beside their explanation, never as bare labels in the search list.
+
 ## Running the extractor
 
 ```bash

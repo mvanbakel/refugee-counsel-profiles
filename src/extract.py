@@ -307,7 +307,7 @@ def signature(text: str) -> str | None:
 
 COUNTRY = re.compile(
     r"\b(?:citizens?|nationals?) of (?:the )?"
-    r"((?:[A-Z][A-Za-z'\-]+|of|and|the)(?: (?:[A-Z][A-Za-z'\-]+|of|the))*)")
+    r"((?:St\.|[A-Z][A-Za-z'\-]+|of|and|the)(?: (?:St\.|[A-Z][A-Za-z'\-]+|of|the|and(?= [A-Z])))*)")
 
 
 # Inside a conclusion, plain "... are rejected" / "I reject the claim" is safe to read.
