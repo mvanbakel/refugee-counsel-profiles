@@ -1,0 +1,51 @@
+citation,decision_date,year,region,file_system,hearing_place,decision_type,panel,panel_source,counsel,counsel_key,counsel_status,counsel_raw,minister_intervened,minister_counsel,country,joined_files,outcome,outcome_source,no_credible_basis,manifestly_unfounded
+AA3-00271,2003-12-02,2003,Ottawa,pre-2012,"Ottawa, Ontario",claim,Azhar Ali Khan,header,Rezaur Rahman,rezaur rahman,named,Rezaur Rahman,False,,Sri Lanka,1,rejected,conclusion,False,False
+AA3-00072,2004-01-15,2004,Ottawa,pre-2012,"Ottawa, Ontario",claim,William M. Davis,header,Ghislaine Mac Lellan,ghislaine mac lellan,named,Ghislaine Mac Lellan,False,,Costa Rica,1,rejected,conclusion,False,False
+CA2-00788,2003-05-08,2003,Calgary,pre-2012,"Regina, Saskatchewan",claim,Andrew Rozdilsky,header,Alex Stojicevec,alex stojicevec,named,Alex Stojicevec,False,,United States,1,rejected,opening,False,False
+CA4-00446,2005-05-19,2005,Calgary,pre-2012,"Edmonton, Alberta",claim,Marnie Armstrong,header,Michael Battista,michael battista,named,Michael Battista,False,,Zimbabwe,4,rejected,keywords,False,False
+CA5-00870,2008-01-03,2008,Calgary,pre-2012,,claim,,,Nico G.J. Breed,nico g j breed,named,NICO G.J. BREED,True,Anna Audia,People's Republic of China,1,rejected,keywords,False,False
+MA0-07137,2003-12-04,2003,Montréal,pre-2012,Montreal,claim,José wa Tshisungu Tshisungu,header,Serban Tismanariu,serban tismanariu,named,Me Serban Tismanariu,True,Claude Beaupre,Romania,1,rejected,conclusion,False,False
+MA4-05507,2006-01-12,2006,Montréal,pre-2012,"Montreal, Quebec",claim,Ruth Delisle,header,Joseph W. Allen,joseph w allen,named,Me Joseph W. Allen,False,,Republic of Chad,1,rejected,keywords,False,False
+MA7-04305,2008-11-28,2008,Montréal,pre-2012,"Montréal, Quebec",claim,Mélanie Raymond,header,Styliani Markaki,styliani markaki,named,Me Styliani Markaki,False,,Saint Vincent,1,rejected,keywords,False,False
+MB0-04031,2012-11-08,2012,Montréal,post-2012,"Montréal, Quebec",claim,Normand Leduc,header,Sabine Venturelli,sabine venturelli,named,Me Sabine Venturelli,False,,Latvia,1,rejected,keywords,False,False
+MB4-02634,2014-11-05,2014,Montréal,post-2012,"Montréal, Québec",claim,Donna Ramacieri,header,Richard M Addinall,richard m addinall,named,Me Richard M Addinall,True,Veronique Aubry,Colombia,2,rejected,conclusion,False,False
+MB6-06026,2017-01-27,2017,Montréal,post-2012,"Montréal, Québec",claim,Anne Bardin,header,Alain Joffe,alain joffe,named,Alain Joffe,False,,Bangladesh,1,rejected,conclusion,False,False
+MB7-17275,2019-06-11,2019,Montréal,post-2012,"Montréal, Quebec",claim,Trisha Elie,header,Mark J. Gruszczynski,mark j gruszczynski,named,Mark J. Gruszczynski,True,Michel-Ange Jakhar,Haiti,2,accepted,conclusion,False,False
+TA3-04955,2003-07-07,2003,Toronto,pre-2012,,claim,Cliff Berry,header,Mak Sultan,mak sultan,named,Mak Sultan,False,,Pakistan,1,rejected,conclusion,False,False
+TA4-18821,2005-12-16,2005,Toronto,pre-2012,,claim,C. Forbes,header,Susan J. Woolner,susan j woolner,named,Susan J. Woolner,False,,Indonesia,1,rejected,keywords,False,False
+TA6-08890,2009-03-31,2009,Toronto,pre-2012,TORONTO,claim,M. Sterlin,header,J. Norris Ormston,j norris ormston,named,J. Norris Ormston,False,,India,1,rejected,keywords,False,False
+TA8-18092,2010-07-22,2010,Toronto,pre-2012,"Toronto, Ontario",claim,Cliff Berry,header,Matthew J. Wells,matthew j wells,named,Matthew J. Wells,False,,Colombia,4,rejected,keywords,False,False
+TB2-02732,2013-08-27,2013,Toronto,post-2012,"Toronto, Ontario",claim,M. Sterlin,header,Paul Dineen,paul dineen,named,Paul Dineen,False,,Afghanistan,2,rejected,conclusion,False,False
+TB2-14617,2017-10-26,2017,Toronto,post-2012,"Toronto, Ontario",claim,Milton Israel,header,Elyse Korman,elyse korman,named,Elyse Korman,False,,China,4,rejected,conclusion,False,False
+TB8-00393,2019-03-01,2019,Toronto,post-2012,In Chambers,claim,Craig Costantino,header,,,none,N/A,False,,,3,accepted,conclusion,False,False
+VA1-04397,2002-09-09,2002,Vancouver,pre-2012,"Vancouver, B.C.",claim,Anna Terrana,header,B.S. Brar,b s brar,named,B.S. Brar,False,,India,1,rejected,conclusion,False,False
+VA3-04732,2004-08-19,2004,Vancouver,pre-2012,"Vancouver, BC",vacation,Michael A. Ross,header,Chris Ho,chris ho,named,Chris Ho,True,Dan Tucci and Shelly Buckoll,Pakistan,1,rejected,conclusion,False,False
+VA6-02954,2008-05-27,2008,Vancouver,pre-2012,Videoconferencing held in Calgary. AB Fait par vidéoconférence à,claim,Michal Mivasair,signature,Satnam Aujla,satnam aujla,named,Satnam Aujla,False,,Fiji,1,rejected,keywords,False,False
+VB0-03546,2012-03-08,2012,Vancouver,post-2012,,claim,,,Malini Dyonisius,malini dyonisius,named,Malini Dyonisius,True,Marin Debruyn,Sri Lanka,1,accepted,conclusion,False,False
+VB3-02127,2014-04-03,2014,Vancouver,post-2012,Heard by videoconference in,cessation,Kerry Cundal,header,Roger Bhatti,roger bhatti,named,Roger Bhatti,True,Alannah Hatch,,1,accepted,conclusion,False,False
+VB7-04893,2017-12-21,2017,Vancouver,post-2012,,claim,Mélanie Chartier,header,Malvin Harding,malvin harding,named,Malvin Harding,True,Jeffrey Wicharuk,Zimbabwe,4,split,conclusion,False,False
+VB8-03928,2019-05-15,2019,Vancouver,post-2012,Heard by videoconference in,claim,Janko Predovic,header,,,none,N/A,False,,Jamaica,1,rejected,conclusion,False,False
+TA8-12462,2010-01-06,2010,Toronto,pre-2012,"TORONTO, ONTARIO",claim,W. Lim,header,Michael Loebach,michael loebach,named,MICHAEL LOEBACH,False,,Colombia,1,rejected,keywords,False,False
+MA8-09324,2009-04-01,2009,Montréal,pre-2012,"Montréal, Quebec",claim,Youssoupha Diop,header,Claudia Aceituno,claudia aceituno,named,Me Claudia Aceituno,False,,Mexico,3,rejected,keywords,False,False
+TB1-15436,2012-03-27,2012,Toronto,post-2012,Toronto (Ontario),claim,Michael S. McCaffrey,header,Kibondo M. Kilongozi,kibondo m kilongozi,named,Kibondo M. Kilongozi,False,,Democratic Republic of the Congo,1,rejected,keywords,False,False
+TA9-19067,2011-07-19,2011,Toronto,pre-2012,"Toronto, Ontario",claim,Roslyn Ahara,header,Michael Brodzky,michael brodzky,named,Michael Brodzky,False,,Colombia,2,rejected,keywords,False,False
+TB5-13207,2016-01-26,2016,Toronto,post-2012,"Toronto, Ontario",claim,Randa Mekhael,header,Mercy Dadepo,mercy dadepo,named,Mercy Dadepo,False,,Federal Republic of Nigeria,1,rejected,opening,True,False
+VA6-01369,2008-09-12,2008,Vancouver,pre-2012,,claim,Philip MacAulay,signature,Alexander Ning,alexander ning,named,Alexander Ning,True,Randal Hyland,China,3,rejected,keywords,False,False
+MA6-07343,2008-10-20,2008,Montréal,pre-2012,"Montréal, Quebec",claim,Donal Archambault,header,Gisele Barraza,gisele barraza,named,Me Gisele Barraza,True,Ewa Staszewicz,Mexico,3,split,keywords,False,False
+TA7-15160,2010-03-09,2010,Toronto,pre-2012,"Toronto, Ontario",claim,David McBean,header,Philip U. Okpala,philip u okpala,named,Philip U. Okpala,False,,Czech Republic,3,rejected,keywords,False,False
+MA6-07717,2009-04-24,2009,Montréal,pre-2012,TORONTO,claim,Martin Ginsherman,header,Max Berger,max berger,named,MAX BERGER,False,,,1,rejected,keywords,False,False
+VA9-05795,2011-01-17,2011,Vancouver,pre-2012,,claim,Douglas Fortney,signature,Craig Costantino,craig costantino,named,Craig Costantino,False,,Mexico,1,rejected,keywords,False,False
+TA5-06336,2007-11-22,2007,Toronto,pre-2012,Toronto,claim,M. Weir,header,Boniface Ahunwan,boniface ahunwan,named,Boniface Ahunwan,True,Heather Pearson,Mexico,1,rejected,keywords,False,False
+TA5-11646,2006-05-25,2006,Toronto,pre-2012,,claim,Harvey Savage,header,Johnson Babalola,johnson babalola,named,Johnson Babalola,False,,Nigeria,1,rejected,keywords,False,False
+TB1-07197,2015-01-06,2015,Toronto,post-2012,"Toronto, Ontario",claim,Walter Kawun,header,Ian D. Hamilton,ian d hamilton,named,Ian D. Hamilton,True,Patrick Klauss,Sri Lanka,3,rejected,conclusion,False,False
+MB5-01010,2016-01-15,2016,Montréal,post-2012,"Montreal, Québec",claim,Linda Houle,header,,,none,N/A,True,Michel-Ange Jakhar,Jamaica,1,accepted,conclusion,False,False
+MA8-06436,2011-12-20,2011,Montréal,pre-2012,"Montréal, Quebec",claim,Maria De Andrade,header,Chantal Ianniciello,chantal ianniciello,named,Me Chantal Ianniciello,False,,,1,rejected,keywords,False,False
+MA8-00408,2010-10-04,2010,Montréal,pre-2012,"Montréal, Québec",claim,Edward Aronoff,header,Tony Manglaviti,tony manglaviti,named,Me Tony Manglaviti,False,,Pakistan,1,rejected,keywords,False,False
+MA9-02262,2011-06-21,2011,Montréal,pre-2012,"Montréal, Quebec",claim,Roxane Cyr,header,Angelica Pantiru,angelica pantiru,named,Me Angelica Pantiru,False,,Mexico,1,rejected,keywords,False,False
+TA6-08649,2008-04-02,2008,Toronto,pre-2012,"Toronto, Ontario",claim,Milton Israel,header,Vania Campana,vania campana,named,Vania Campana,False,,People's Republic of China,1,rejected,keywords,False,False
+TB0-06040,2012-06-18,2012,Toronto,post-2012,"Toronto, Ontario",claim,Walter Kawun,header,Michael Korman,michael korman,named,Michael Korman,False,,People's Republic of China,1,rejected,keywords,False,False
+MA2-03449,2003-07-25,2003,Montréal,pre-2012,Montreal,claim,Joulekhan Pirbay,header,Manuel Antonio Centurion,manuel antonio centurion,named,Me Manuel Antonio Centurion,False,,Mexico,3,accepted,conclusion,False,False
+TA9-08293,2010-04-06,2010,Toronto,pre-2012,"Toronto, Ontario",claim,M. Pettinella,header,Luis Antonio Monroy,luis antonio monroy,named,Luis Antonio Monroy,False,,Mexico,2,rejected,keywords,False,False
+TB3-09193,2017-07-26,2017,Toronto,post-2012,"Toronto, Ontario",vacation,Nadra Qadeer,header,Wennie Lee,wennie lee,named,Wennie Lee,True,G. Whitelock,Poland,1,accepted,conclusion,False,False
+MA4-03904,2005-11-28,2005,Montréal,pre-2012,"Montreal, Quebec",claim,Michael Crelinsten,header,Dan M. Bohbot,dan m bohbot,named,Me Dan M. Bohbot,False,,Pakistan,1,rejected,keywords,False,False
+MA5-04581,2007-02-16,2007,Montréal,pre-2012,"Toronto, Ontario",claim,Sylvie Lévesque,header,Jennifer K. Roggemann,jennifer k roggemann,named,Me Jennifer K. Roggemann,False,,Colombia,4,rejected,keywords,False,False
