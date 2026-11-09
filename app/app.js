@@ -1,4 +1,4 @@
-/* Refugee Counsel Profiles — static single-page app.
+/* Know Your Lawyer — static single-page app.
    Data: data/profiles.json, built by src/profiles.py. */
 
 "use strict";
@@ -96,7 +96,7 @@ function filtered() {
 }
 
 function renderHome() {
-  document.title = "Find counsel · Refugee Counsel Profiles";
+  document.title = "Find counsel · Know Your Lawyer";
   const o = DATA.overall;
   const countryOpts = DATA.countries
     .map((c) => `<option value="${esc(c.name)}"${c.name === state.country ? " selected" : ""}>${esc(c.name)}</option>`)
@@ -258,7 +258,7 @@ function renderProfile(id) {
     view.innerHTML = `<a class="crumb" href="#/">← All counsel</a><div class="panel empty">No profile found.</div>`;
     return;
   }
-  document.title = `${p.name} · Refugee Counsel Profiles`;
+  document.title = `${p.name} · Know Your Lawyer`;
   const cmp = p.vs_expected;
   const ncb = p.ncb_vs_expected;
   const claims = p.claims;
@@ -397,7 +397,7 @@ async function openReader(citation) {
 
 // ---------- about ----------
 function renderAbout() {
-  document.title = "How it works · Refugee Counsel Profiles";
+  document.title = "How it works · Know Your Lawyer";
   const o = DATA.overall;
   view.innerHTML = `<article class="prose">
     <h1>How it works</h1>

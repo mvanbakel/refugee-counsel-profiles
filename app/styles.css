@@ -77,19 +77,44 @@ p { margin: 0 0 .8em; }
 .site-header { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 10; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 60px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 650; }
-.brand-mark { width: 30px; height: 30px; border-radius: 8px; background: var(--accent); color: var(--surface); display: grid; place-items: center; font-family: var(--serif); font-size: 15px; }
+.brand-mark { min-width: 30px; padding: 0 6px; height: 30px; border-radius: 8px; background: var(--accent); color: var(--surface); display: grid; place-items: center; font-family: var(--serif); font-size: 15px; }
 .nav { display: flex; gap: 4px; }
 .nav a { text-decoration: none; color: var(--text-2); padding: 6px 10px; border-radius: 8px; font-size: .95rem; }
 .nav a[aria-current="page"], .nav a:hover { color: var(--text); background: var(--surface-2); }
 .nav a, .brand { white-space: nowrap; }
 @media (max-width: 480px) {
-  .brand { font-size: .92rem; gap: 8px; }
-  .brand-mark { width: 26px; height: 26px; font-size: 13px; }
-  .brand-long { display: none; }
-  .nav a { font-size: .85rem; padding: 6px 8px; }
+  .site-header .wrap { gap: 8px; }
+  .brand { font-size: .88rem; gap: 6px; }
+  .brand-mark { min-width: 26px; padding: 0 4px; height: 26px; font-size: 11px; letter-spacing: -.02em; }
+  .nav { gap: 2px; }
+  .nav a { font-size: .85rem; padding: 6px 6px; }
 }
 
 main { flex: 1; padding: 28px 0 48px; }
+
+/* Page layout with ad placeholders: side rails on wide screens, one strip below on narrow ones */
+.layout { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 1480px; margin: 0 auto; }
+.layout > main { min-width: 0; }
+.ad-rail { display: none; }
+.ad-slot {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center;
+  border: 1.5px dashed var(--axis); border-radius: var(--radius); background: var(--surface-2);
+  color: var(--text-3); font-size: .82rem; line-height: 1.35; padding: 16px 12px;
+}
+.ad-slot strong { color: var(--text-2); font-size: .92rem; }
+.ad-label { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.ad-size { font-variant-numeric: tabular-nums; font-size: .75rem; }
+.ad-rail .ad-slot { position: sticky; top: 84px; margin-top: 28px; height: 600px; }
+.ad-strip .ad-slot { min-height: 90px; }
+.ad-strip-wrap { padding-bottom: 28px; }
+.ad-note { font-size: .75rem; color: var(--text-3); margin: 8px 0 0; }
+@media (min-width: 1400px) {
+  .layout { grid-template-columns: 160px minmax(0, 1fr) 160px; gap: 24px; padding: 0 16px; }
+  .ad-rail { display: block; }
+  .ad-strip { display: none; }
+  .ad-strip-wrap { padding-bottom: 20px; }
+  .ad-note { text-align: center; margin: 0; }
+}
 
 /* Cards and panels */
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }

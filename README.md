@@ -1,4 +1,4 @@
-# Refugee Counsel Profiles
+# Know Your Lawyer
 
 A legal engineering class project. It builds profiles of counsel who appear before the Refugee Protection Division (RPD) of the Immigration and Refugee Board, using published RPD decisions. The goal is to help refugee claimants, who often can't reach top lawyers, judge a potential representative by their track record.
 
