@@ -115,6 +115,9 @@ main { flex: 1; padding: 28px 0 48px; }
 .ad-copy { margin: 0; font-size: .85rem; line-height: 1.4; }
 .ad-cta { display: inline-block; background: #e3a83b; color: #1d1a12; font-weight: 650; font-size: .85rem; border-radius: 999px; padding: 8px 16px; }
 .ad-sample { font-size: .68rem; color: #9fb8cd; }
+.ad-mock-teal { background: linear-gradient(180deg, #13675c 0%, #0a3d36 100%); color: #d3ebe5; }
+.ad-mock-teal .ad-label, .ad-mock-teal .ad-sample { color: #9cc8bd; }
+.ad-mock-teal .ad-cta { background: #f2b84b; }
 .ad-strip-wrap { padding-bottom: 28px; }
 .ad-note { font-size: .75rem; color: var(--text-3); margin: 8px 0 0; }
 @media (min-width: 1400px) {
