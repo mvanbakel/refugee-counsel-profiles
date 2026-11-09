@@ -106,6 +106,15 @@ main { flex: 1; padding: 28px 0 48px; }
 .ad-size { font-variant-numeric: tabular-nums; font-size: .75rem; }
 .ad-rail .ad-slot { position: sticky; top: 84px; margin-top: 28px; height: 600px; }
 .ad-strip .ad-slot { min-height: 90px; }
+/* Mock ad (left rail). It keeps its own colours in both themes, like a real ad would. */
+.ad-mock { justify-content: space-between; gap: 12px; padding: 18px 12px; border: none; color: #d6e4f0;
+  background: linear-gradient(180deg, #164a73 0%, #0c2e4a 100%); }
+.ad-mock .ad-label { color: #9fb8cd; }
+.ad-headline { margin: 0; font-family: var(--serif); font-size: 1.45rem; font-weight: 600; line-height: 1.15; color: #ffffff; }
+.ad-art { width: 100%; height: auto; }
+.ad-copy { margin: 0; font-size: .85rem; line-height: 1.4; }
+.ad-cta { display: inline-block; background: #e3a83b; color: #1d1a12; font-weight: 650; font-size: .85rem; border-radius: 999px; padding: 8px 16px; }
+.ad-sample { font-size: .68rem; color: #9fb8cd; }
 .ad-strip-wrap { padding-bottom: 28px; }
 .ad-note { font-size: .75rem; color: var(--text-3); margin: 8px 0 0; }
 @media (min-width: 1400px) {
