@@ -130,6 +130,18 @@ main { flex: 1; padding: 28px 0 48px; }
 .note strong { display: block; margin-bottom: 2px; }
 
 /* Controls */
+/* World map of claimant countries */
+.map-panel { margin-bottom: 24px; }
+.map-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
+.map-head p { margin: 0; max-width: 60ch; }
+.map-key text { fill: var(--text-2); font: 13px var(--font); }
+.map { display: block; width: 100%; height: auto; }
+.map .land { fill: var(--surface-2); stroke: var(--axis); stroke-width: .5; stroke-linejoin: round; }
+.map-dot { cursor: pointer; }
+.map-dot .hit { fill: transparent; }
+.mark { fill: var(--series); fill-opacity: .7; stroke: var(--surface); stroke-width: 1; }
+.map-dot:hover .mark { fill-opacity: 1; }
+.map-dot.selected .mark { fill-opacity: 1; stroke: var(--text); stroke-width: 2; }
 .controls { display: grid; grid-template-columns: 2fr 1.4fr 1.2fr auto; gap: 10px; align-items: end; margin-bottom: 14px; }
 @media (max-width: 760px) { .controls { grid-template-columns: 1fr 1fr; } .controls .field-search { grid-column: 1 / -1; } }
 .field label { display: block; font-size: .8rem; font-weight: 600; color: var(--text-2); margin-bottom: 4px; }

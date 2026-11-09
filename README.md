@@ -47,6 +47,7 @@ A static website in `app/`: search counsel, filter by the claimant's country, an
 
 ```bash
 .venv/bin/python src/profiles.py                      # rebuild app/data/profiles.json
+.venv/bin/python src/worldmap.py                      # rebuild app/data/world.json (home page map)
 python3 -m http.server 8765 --directory app           # then open http://localhost:8765
 ```
 
@@ -93,3 +94,11 @@ The bulk Parquet file is A2AJ's approved bulk-access route. Their API terms proh
 - People change roles. Craig Costantino appears as counsel in 2010 and as a board member in 2019.
 - The same counsel can appear under different spellings, or as a firm, consultant or clinic. Matching names needs care, and counsel may be lawyers or licensed immigration consultants.
 - Present facts with context, not star ratings. Never try to re-identify claimants.
+
+### Home page map (`src/worldmap.py`)
+
+Each claimant country with at least 3 published claims is a dot sized by its number of claims.
+Country outlines are Natural Earth 1:110m (public domain), from the world-atlas package v2.0.2,
+saved in `data/raw/countries-110m.json`. The script projects them once (Equal Earth) and places each
+dot at the centre of the country's largest land area. Small Caribbean islands, Tibet, and the former
+Serbia and Montenegro have fixed coordinates. Selecting a dot filters the counsel list to that country.

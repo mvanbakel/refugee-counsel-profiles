@@ -10,6 +10,7 @@ const tip = document.getElementById("tooltip");
 
 let DATA = null;
 let BY_ID = new Map();
+let WORLD = null; // data/world.json, built by src/worldmap.py
 const state = { q: "", country: "", sort: "decisions", min5: true, shown: PAGE };
 
 // ---------- helpers ----------
@@ -116,6 +117,17 @@ function renderHome() {
       </div>
     </section>
 
+    <section class="panel map-panel" aria-labelledby="map-title">
+      <div class="map-head">
+        <div>
+          <h2 id="map-title">Where claimants came from</h2>
+          <p class="muted small">Each dot is a country. Bigger dots mean more published claims. Select a dot to see the counsel who handled claims from that country.</p>
+        </div>
+      </div>
+      <div class="map-wrap" id="map"><p class="muted small">Loading map…</p></div>
+      <p class="sr-only">The claimant's country filter below lists the same countries.</p>
+    </section>
+
     <form class="controls" id="controls" role="search" onsubmit="return false">
       <div class="field field-search">
         <label for="q">Search by name</label>
@@ -145,18 +157,75 @@ function renderHome() {
   document.getElementById("sort").value = state.sort;
   const update = () => { state.shown = PAGE; drawList(); };
   document.getElementById("q").addEventListener("input", (e) => { state.q = e.target.value; update(); });
-  document.getElementById("country").addEventListener("change", (e) => {
-    state.country = e.target.value;
-    const sortSel = document.getElementById("sort");
-    sortSel.querySelector('option[value="country"]').disabled = !state.country;
-    if (state.country && state.sort === "decisions") state.sort = "country";
-    if (!state.country && state.sort === "country") state.sort = "decisions";
-    sortSel.value = state.sort;
-    update();
-  });
+  document.getElementById("country").addEventListener("change", (e) => setCountry(e.target.value));
   document.getElementById("sort").addEventListener("change", (e) => { state.sort = e.target.value; update(); });
   document.getElementById("min5").addEventListener("change", (e) => { state.min5 = e.target.checked; update(); });
   drawList();
+  drawMap();
+}
+
+function setCountry(name) {
+  state.country = name;
+  state.shown = PAGE;
+  document.getElementById("country").value = name;
+  const sortSel = document.getElementById("sort");
+  sortSel.querySelector('option[value="country"]').disabled = !state.country;
+  if (state.country && state.sort === "decisions") state.sort = "country";
+  if (!state.country && state.sort === "country") state.sort = "decisions";
+  sortSel.value = state.sort;
+  drawList();
+  markMapSelection();
+}
+
+// ---------- map ----------
+const MAP_MAX_R = 18;
+
+function drawMap() {
+  const box = document.getElementById("map");
+  if (!box) return;
+  if (!WORLD) { box.innerHTML = `<p class="muted small">The map couldn't be loaded. The country filter below still works.</p>`; return; }
+  const max = Math.max(...DATA.countries.map((c) => c.claims));
+  const r = (n) => Math.max(2.5, MAP_MAX_R * Math.sqrt(n / max));
+  // Largest first, so small dots sit on top and stay clickable.
+  const dots = DATA.countries
+    .filter((c) => WORLD.points[c.name])
+    .sort((a, b) => b.claims - a.claims)
+    .map((c) => {
+      const [x, y] = WORLD.points[c.name];
+      const tipText = `${c.name}: ${c.claims.toLocaleString()} published ${c.claims === 1 ? "claim" : "claims"}, ${pct(c.rate, 1)} accepted`;
+      return `<g class="map-dot" data-country="${esc(c.name)}" data-tip="${esc(tipText)}">
+        <circle class="hit" cx="${x}" cy="${y}" r="${r(c.claims) + 4}"></circle>
+        <circle class="mark" cx="${x}" cy="${y}" r="${r(c.claims).toFixed(1)}"></circle></g>`;
+    }).join("");
+  // Size key, drawn inside the map (over the South Pacific) so it scales with the dots.
+  let lx = 24;
+  const ly = WORLD.height - 24;
+  const key = [10, 100, 500].filter((n) => n <= max).map((n) => {
+    const rr = r(n);
+    const out = `<circle class="mark" cx="${lx + rr}" cy="${ly - rr}" r="${rr.toFixed(1)}"></circle>
+      <text x="${(lx + 2 * rr + 5).toFixed(1)}" y="${ly - 2}">${n}</text>`;
+    lx += 2 * rr + 40;
+    return out;
+  }).join("");
+  box.innerHTML = `<svg class="map" viewBox="0 0 ${WORLD.width} ${WORLD.height}" aria-hidden="true">
+    <path class="land" d="${WORLD.path}"></path>${dots}
+    <g class="map-key"><text x="24" y="${ly - 2 * r(500) - 10}">Published claims</text>${key}</g></svg>`;
+  box.querySelectorAll(".map-dot").forEach((g) => {
+    g.addEventListener("click", () => {
+      const name = g.getAttribute("data-country");
+      setCountry(state.country === name ? "" : name);
+      if (state.country) document.getElementById("controls").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+  bindTips(box);
+
+  markMapSelection();
+}
+
+function markMapSelection() {
+  document.querySelectorAll(".map-dot").forEach((g) => {
+    g.classList.toggle("selected", g.getAttribute("data-country") === state.country);
+  });
 }
 
 function drawList() {
@@ -438,9 +507,12 @@ function renderAbout() {
 }
 
 // ---------- start ----------
-fetch("data/profiles.json")
-  .then((r) => r.json())
-  .then((d) => {
+Promise.all([
+  fetch("data/profiles.json").then((r) => r.json()),
+  fetch("data/world.json").then((r) => (r.ok ? r.json() : null)).catch(() => null),
+])
+  .then(([d, w]) => {
+    WORLD = w;
     DATA = d;
     BY_ID = new Map(d.profiles.map((p) => [p.id, p]));
     window.addEventListener("hashchange", route);
